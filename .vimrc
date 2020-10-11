@@ -10,9 +10,16 @@ set showmode
 set showcmd
 set laststatus=2
 
+" swaps/backups
+set noswapfile
+set nobackup
+
 " leader key
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
+" path
+set path+=**
 
 " tabs
 set expandtab
@@ -38,6 +45,10 @@ set clipboard=unnamed
 set hlsearch
 set incsearch
 nnoremap <CR> :nohlsearch<CR><CR>
+
+nnoremap <leader>g :vimgrep /
+nnoremap <leader>f :cnext<CR>
+nnoremap <leader>b :cprevious<CR>
 
 " buffers
 set autoread
